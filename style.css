@@ -1,0 +1,329 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+  }
+  
+  /* Navbar Styling */
+  #navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:blueviolet;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  #navbar #logo img {
+    height: 50px;
+    width: auto;
+  }
+  
+  /* Menu Items */
+  ul {
+    list-style-type: none;
+    display: flex;
+  }
+  
+  ul li {
+    margin: 0 15px;
+  }
+  
+  ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+  }
+  
+  ul li a:hover {
+    color: black;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    ul {
+      flex-direction: column;
+      background-color: blueviolet;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      display: none;
+    }
+  
+    ul li {
+      margin: 10px 0;
+      text-align: center;
+    }
+  
+    ul.show {
+      display: flex;
+    }
+  
+    #navbar #logo {
+      flex-grow: 1;
+    }
+  
+    #navbar #logo img {
+      margin-left: 10px;
+    }
+  }
+  
+  /* Navbar Button for Mobile */
+  #navbar .menu-toggle {
+    display: none;
+    background-color:blueviolet;
+    border: none;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    #navbar .menu-toggle {
+      display: block;
+    }
+  }
+
+
+/* Home Section Styling */
+#home {
+    background-color: #b3e6ed; /* Light Mint background */
+    padding: 0 20px; /* Removed top and bottom padding for better centering */
+    text-align: center;
+    min-height: 100vh; /* Takes up at least 100% of the viewport height */
+    display: flex; /* Flexbox to center the content */
+    flex-direction: column;
+    justify-content: center; /* Vertically centers the content */
+    align-items: center; /* Horizontally centers the content */
+  }
+  
+  #home h1 {
+    font-size: 3rem;
+    color: #190e93;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  #home p {
+    font-size: 1.2rem;
+    color: #150505;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    #home h1 {
+      font-size: 2.5rem;
+    }
+  
+    #home p {
+      font-size: 1rem;
+    }
+  }
+
+  /* About Section Styling */
+.about-section {
+    background-color: #f9f9f9; /* Light background to differentiate the section */
+    padding: 80px 20px; /* Generous padding for spacing */
+    text-align: center; /* Centers the text content */
+  }
+  
+  .about-section .container {
+    max-width: 1000px; /* Limits the container width for better readability */
+    margin: 0 auto; /* Centers the container */
+  }
+  
+  .about-section h2 {
+    font-size: 2.5rem; /* Larger font size for the heading */
+    color: #1b0cba; /* Dark text for heading */
+    margin-bottom: 20px; /* Space below the heading */
+    text-transform: uppercase; /* Capitalizes the heading */
+    letter-spacing: 1.5px; /* Adds letter spacing */
+  }
+  
+  .about-section p {
+    font-size: 1.1rem; /* Slightly larger font size for the paragraph */
+    color: #555; /* Softer text color */
+    line-height: 1.8; /* Spacing between lines */
+    max-width: 800px; /* Limits paragraph width for readability */
+    margin: 0 auto; /* Centers the paragraph */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-section h2 {
+      font-size: 2rem; /* Adjusts heading size for smaller screens */
+    }
+  
+    .about-section p {
+      font-size: 1rem; /* Adjusts paragraph font size for mobile */
+    }
+  }
+
+/* Safety Tips Section Styling */
+#safety-tips {
+    background-color: #f0f4f8; /* Light background color to create a soft, calm look */
+    padding: 80px 20px; /* Adds padding around the content */
+    text-align: center; /* Centers the text content */
+  }
+  
+  #safety-tips .container {
+    max-width: 1000px; /* Limits the container width for better readability */
+    margin: 0 auto; /* Centers the container horizontally */
+  }
+  
+  #safety-tips h2 {
+    font-size: 2.5rem; /* Larger font size for the heading */
+    color: #300797; /* Dark gray color for the heading */
+    margin-bottom: 30px; /* Adds space below the heading */
+    text-transform: uppercase; /* Capitalizes the heading text */
+    letter-spacing: 2px; /* Adds letter spacing to the heading */
+  }
+  
+  #safety-tips p {
+    font-size: 1.2rem; /* Larger font size for the paragraph */
+    color: #555; /* Softer gray color for the paragraph text */
+    line-height: 1.8; /* Adds spacing between lines for readability */
+    max-width: 800px; /* Limits the paragraph width */
+    margin: 0 auto; /* Centers the paragraph */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    #safety-tips h2 {
+      font-size: 2rem; /* Adjusts heading size for mobile screens */
+    }
+  
+    #safety-tips p {
+      font-size: 1rem; /* Adjusts paragraph font size for mobile screens */
+    }
+  }
+  /* Contact Us Section Styling */
+  #contact-us {
+    background-color: #bee4ef; /* Light background color */
+    padding: 80px 20px; /* Adds padding around the section */
+    text-align: center; /* Centers the text */
+    opacity: 0; /* Start with the section hidden */
+    text-align: center;
+    transform: translateY(20px); /* Slightly lower position */
+    animation: fadeInUp 0.6s forwards; /* Animation for fading in */
+}
+
+#contact-us .container {
+    max-width: 800px; /* Limits the width of the container */
+    margin: 0 auto; /* Centers the container */
+}
+
+#contact-us h2 {
+    font-size: 2.5rem; /* Larger font size for the heading */
+    color: #2f08a3; /* Dark color for the heading */
+    margin-bottom: 30px; /* Space below the heading */
+    text-transform: uppercase; /* Uppercase heading text */
+    letter-spacing: 2px; /* Adds letter spacing */
+    animation: slideIn 0.5s ease forwards; /* Animation for heading */
+    text-align: center;
+}
+
+#contact-us p {
+    font-size: 1.1rem; /* Font size for the paragraph */
+    color: #555; /* Softer color for the paragraph text */
+    line-height: 1.6; /* Adds spacing between lines */
+    margin-bottom: 40px; /* Adds space below the paragraph */
+    animation: fadeIn 0.5s ease forwards; /* Animation for paragraph */
+}
+
+/* Form Styling */
+form {
+    display: flex; /* Flexbox layout for form */
+    flex-direction: column; /* Stack form elements vertically */
+    gap: 20px; /* Space between form groups */
+}
+
+.form-group {
+    display: flex; /* Flex layout for form group */
+    flex-direction: column; /* Stack label and input vertically */
+    align-items: flex-start; /* Align items to the start */
+    opacity: 0; /* Start form fields hidden */
+    transform: translateY(20px); /* Slightly lower position */
+    animation: fadeInUp 0.5s ease forwards; /* Animation for form fields */
+    animation-delay: 0.2s; /* Delay for staggered appearance */
+}
+
+label {
+    font-size: 1rem; /* Font size for labels */
+    color: #333; /* Dark color for labels */
+    margin-bottom: 5px; /* Space below labels */
+}
+
+input[type="text"] {
+    width: 100%; /* Full width for inputs */
+    padding: 10px; /* Padding inside inputs */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Font size for input text */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+input[type="text"]:focus {
+    border-color: #007BFF; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start transparent */
+    }
+    to {
+        opacity: 1; /* End fully visible */
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0; /* Start transparent */
+        transform: translateY(20px); /* Start slightly lower */
+    }
+    to {
+        opacity: 1; /* End fully visible */
+        transform: translateY(0); /* End in original position */
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px); /* Start slightly higher */
+        opacity: 0; /* Start transparent */
+    }
+    to {
+        transform: translateY(0); /* End in original position */
+        opacity: 1; /* End fully visible */
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #contact-us h2 {
+        font-size: 2rem; /* Adjust heading size for mobile */
+    }
+
+    #contact-us p {
+        font-size: 1rem; /* Adjust paragraph font size for mobile */
+    }
+}
